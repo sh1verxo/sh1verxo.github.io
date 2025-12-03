@@ -1,0 +1,67 @@
+<?php
+// Example user data
+$username   = "Vraudrak";
+$age        = 17;
+$location   = "USA";
+$bio        = "I like music, tech, and making stuff.";
+$avatar     = "avatar.jpg"; // put an image in the same folder
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php echo $username; ?>'s Profile</title>
+<style>
+body {
+    background: #d7d7d7 url('bg.gif');
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+.box {
+    width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 1px solid #555;
+    padding: 10px;
+}
+h1 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+td {
+    font-size: 12px;
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h1><?php echo $username; ?>'s Profile</h1>
+
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" width="150">
+                <img src="<?php echo $avatar; ?>" width="140" height="140" style="border:1px solid #333;">
+            </td>
+            <td valign="top">
+                <b>Username:</b> <?php echo $username; ?><br>
+                <b>Age:</b> <?php echo $age; ?><br>
+                <b>Location:</b> <?php echo $location; ?><br>
+                <br>
+                <b>Bio:</b><br>
+                <div style="border:1px solid #999; padding:5px; background:#f0f0f0;">
+                    <?php echo nl2br($bio); ?>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <b>Contact</b><br>
+    <a href="mailto:example@example.com">Send Message</a><br>
+    <a href="#">Add to Friends</a><br>
+</div>
+
+</body>
+</html>
