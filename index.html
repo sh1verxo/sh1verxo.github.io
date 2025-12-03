@@ -1,24 +1,35 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo $username; ?>'s Profile</title>
+<title>User Profile</title>
 <style>
 body {
-    background: #d7d7d7 url('bg.gif');
+    background: #cfcfcf url('bg.gif');
     font-family: Verdana, Arial, sans-serif;
     font-size: 12px;
+    color: #000;
 }
-.box {
-    width: 600px;
-    margin: 20px auto;
+
+#profile-box {
+    width: 650px;
+    margin: 30px auto;
     background: #ffffff;
-    border: 1px solid #555;
+    border: 1px solid #666;
     padding: 10px;
 }
+
 h1 {
     font-size: 18px;
     margin: 0 0 10px 0;
 }
+
+.info-box {
+    border: 1px solid #999;
+    background: #f4f4f4;
+    padding: 5px;
+    margin-top: 5px;
+}
+
 td {
     font-size: 12px;
     padding: 5px;
@@ -27,22 +38,22 @@ td {
 </head>
 <body>
 
-<div class="box">
-    <h1><?php echo $username; ?>'s Profile</h1>
+<div id="profile-box">
+    <h1>Username's Profile</h1>
 
     <table border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td valign="top" width="150">
-                <img src="<?php echo $avatar; ?>" width="140" height="140" style="border:1px solid #333;">
+                <img src="avatar.jpg" width="140" height="140" style="border:1px solid #333;">
             </td>
             <td valign="top">
-                <b>Username:</b> <?php echo $username; ?><br>
-                <b>Age:</b> <?php echo $age; ?><br>
-                <b>Location:</b> <?php echo $location; ?><br>
-                <br>
-                <b>Bio:</b><br>
-                <div style="border:1px solid #999; padding:5px; background:#f0f0f0;">
-                    <?php echo nl2br($bio); ?>
+                <b>Username:</b> Username<br>
+                <b>Age:</b> 17<br>
+                <b>Location:</b> USA<br>
+
+                <div class="info-box">
+                    <b>Bio:</b><br>
+                    This is an example bio. Replace this with whatever you want.
                 </div>
             </td>
         </tr>
@@ -51,7 +62,7 @@ td {
     <hr>
 
     <b>Contact</b><br>
-    <a href="mailto:example@example.com">Send Message</a><br>
+    <a href="#">Send Message</a><br>
     <a href="#">Add to Friends</a><br>
 </div>
 
